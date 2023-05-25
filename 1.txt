@@ -1,0 +1,15 @@
+let DarthVader
+let nombreDarthVader
+let fuerzaDarthVader
+document.getElementById('miFormulario3').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    nombreDarthVader = document.getElementById('nombreDarthVader').value;
+    fuerzaDarthVader = document.getElementById('fuerzaDarthVader').value;
+    DarthVader=new MaestroJedi(nombreDarthVader,fuerzaDarthVader);
+    document.getElementById("DarthVader").innerHTML=`
+    <h1>Resultado usarFuerza: ${DarthVader.presentarse()}</h1>
+    <h1>Resultado usarFuerza: ${DarthVader.usarFuerza()}</h1>
+    <h1>Resultado entrenar: ${DarthVader.ensenar()}</h1>
+    `
+});
+

@@ -10,6 +10,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
     <script src="main.js" defer></script>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         body{
             background-color: black;
             color: white;
@@ -18,35 +23,141 @@
 </head>
 <body>
 
+<!-- Crea una clase base llamada Personaje con las siguientes
+propiedadesprivadas:nombreyfuerza.Laclasedebetenerun
+método público llamado presentarse() que imprima en el
+HTML. un mensaje indicando el nombre del personaje y su
+niveldefuerza. -->
 <div class="d-flex justify-content-center align-items-center mt-4">
-    <h1>Primer y segundo ejercicio</h1>
+    <h1>Ejercicio 1</h1>
 </div>
-
 <div class="container">
     <form id="miFormulario">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+        <input type="text" class="form-control" id="nombre" placeholder="Ingresa nombre">
       </div>
       <div class="form-group">
-        <label for="edad">Edad:</label>
-        <input type="number" class="form-control" id="edad" placeholder="Ingresa tu edad">
+        <label for="fuerza">Fuerza:</label>
+        <input type="number" class="form-control" id="fuerza" placeholder="Ingresa fuerza">
       </div>
-      <div class="form-group">
-        <label for="seleccion">Selecciona una opción:</label>
-        <select class="form-control" id="sexo">
-    <!-- <option value="">Sexo:</option> -->
-          <option value="opcion1">Masculino</option>
-          <option value="opcion2">Femenino</option>
-        </select>
-      </div>
-      <input type="submit" class="btn btn-primary" value="Imprimir saludo">
+      <input type="submit" class="btn btn-primary" value="Imprimir features">
     </form>
 </div>
-
 <div class="d-flex justify-content-center align-items-center mt-4">
-    <h1 id="saludo"></h1>
+    <h1 id="features"></h1>
 </div>
+
+<!-- CreadosclasesderivadasdePersonaje:JediySith. -->
+
+<!-- La clase Jedi debe tener un método público llamado
+usarFuerza() que imprima en el HTML un mensaje
+indicando que el Jedi está utilizando la Fuerza para
+proteger la galaxia. Además, debe tener un método público
+llamadoentrenar()queincrementesuniveldefuerzaen10
+unidades. -->
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <h1>Ejercicio 2</h1>
+</div>
+<div class="container">
+    <form id="miFormulario1">
+      <div class="form-group">
+        <label for="nombreJedi">Nombre:</label>
+        <input type="text" class="form-control" id="nombreJedi" placeholder="Ingresa nombre">
+      </div>
+      <div class="form-group">
+        <label for="fuerzaJedi">Fuerza:</label>
+        <input type="number" class="form-control" id="fuerzaJedi" placeholder="Ingresa fuerza">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Imprimir Jedi">
+    </form>
+</div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <div id="Jedi"></div>
+</div>
+
+<!-- La clase Sith debe tener un método público llamado
+usarFuerza() que imprima en el HTML un mensaje
+indicando que el Sith está utilizando la Fuerza para
+conquistar la galaxia. Además, debe tener un método
+público llamado corromper() que disminuya su nivel de
+fuerzaen5unidades -->
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <h1>Ejercicio 3</h1>
+</div>
+<div class="container">
+    <form id="miFormulario2">
+      <div class="form-group">
+        <label for="nombreSith">Nombre:</label>
+        <input type="text" class="form-control" id="nombreSith" placeholder="Ingresa nombre">
+      </div>
+      <div class="form-group">
+        <label for="fuerzaSith">Fuerza:</label>
+        <input type="number" class="form-control" id="fuerzaSith" placeholder="Ingresa fuerza">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Imprimir Sith">
+    </form>
+</div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <div id="Sith"></div>
+</div>
+
+<!-- Crea una clase adicional llamada MaestroJedi que herede de la
+claseJedi. La clase MaestroJedi debe tener un método público
+llamado enseñar() que incremente su nivel de fuerza en 20
+unidades. -->
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <h1>Ejercicio 4</h1>
+</div>
+<div class="container">
+    <form id="miFormulario3">
+      <div class="form-group">
+        <label for="nombreYoda">Nombre:</label>
+        <input type="text" class="form-control" id="nombreYoda" placeholder="Ingresa nombre">
+      </div>
+      <div class="form-group">
+        <label for="fuerzaYoda">Fuerza:</label>
+        <input type="number" class="form-control" id="fuerzaYoda" placeholder="Ingresa fuerza">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Imprimir Maestro Jedi">
+    </form>
+</div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <div id="Yoda"></div>
+</div>
+
+<!-- Crea una instancia de la clase Sith llamada darthVader y asigna
+valores a sus propiedades utilizando un constructor. Luego,
+llamaalmétodopresentarse(),usarFuerza() y corromper() para
+queelSithimprimalosmensajescorrespondientes. -->
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <h1>Ejercicio 5</h1>
+</div>
+<div class="container">
+    <form id="miFormulario4">
+      <div class="form-group">
+        <label for="nombreDarthVader">Nombre:</label>
+        <input type="text" class="form-control" id="nombreDarthVader" placeholder="Ingresa nombre">
+      </div>
+      <div class="form-group">
+        <label for="fuerzaDarthVader">Fuerza:</label>
+        <input type="number" class="form-control" id="fuerzaDarthVader" placeholder="Ingresa fuerza">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Imprimir Darth Vader">
+    </form>
+</div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <div id="DarthVader"></div>
+</div>
+
+<!-- Crea una función llamada batalla que tome como parámetro
+dos objetos de tipo Personaje y simule una batalla entre ellos.
+Dentro de esta función, muestra en el HTML mensajes
+indicando el desarrollo de la batalla, como los ataques y
+defensas de los personajes. Utiliza los métodos usarFuerza() y
+las propiedades de fuerza para determinar el resultado de la
+batalla. -->
+
 
 </body>
 </html>
